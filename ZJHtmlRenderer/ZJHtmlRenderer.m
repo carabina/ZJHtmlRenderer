@@ -40,7 +40,7 @@
 - (void)loadWebView {
     UIWindow *window = [UIApplication sharedApplication].delegate.window;
     
-    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(-1, 0, 1, 1)];
     self.webView.delegate = self;
     self.webView.scalesPageToFit = YES;
     [window addSubview:self.webView];
@@ -75,7 +75,6 @@
     
     if (self.completionBlock) {
         self.completionBlock(image, nil);
-        self.completionBlock = nil;
     }
     
     [self removeWebView];;
@@ -88,7 +87,6 @@
    
     if (self.completionBlock) {
         self.completionBlock(nil, error);
-        self.completionBlock = nil;
     }
     
     [self removeWebView];
@@ -101,6 +99,7 @@
     
     if (self.webView) {
         CGRect newFrame = self.webView.frame;
+        newFrame.origin.x = -imageWidth;
         newFrame.size.width = imageWidth;
         self.webView.frame = newFrame;
     }

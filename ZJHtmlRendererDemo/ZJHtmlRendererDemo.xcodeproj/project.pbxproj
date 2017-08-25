@@ -15,6 +15,8 @@
 		200D7FD51F500A0500364915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200D7FD31F500A0500364915 /* LaunchScreen.storyboard */; };
 		200D7FE01F500A0500364915 /* ZJHtmlRendererDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 200D7FDF1F500A0500364915 /* ZJHtmlRendererDemoTests.m */; };
 		200D7FEB1F500A0500364915 /* ZJHtmlRendererDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 200D7FEA1F500A0500364915 /* ZJHtmlRendererDemoUITests.m */; };
+		200D7FFD1F500F7700364915 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 200D7FFA1F500F7700364915 /* UIView+Snapshot.m */; };
+		200D7FFE1F500F7700364915 /* ZJHtmlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 200D7FFC1F500F7700364915 /* ZJHtmlRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		200D7FE61F500A0500364915 /* ZJHtmlRendererDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZJHtmlRendererDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		200D7FEA1F500A0500364915 /* ZJHtmlRendererDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJHtmlRendererDemoUITests.m; sourceTree = "<group>"; };
 		200D7FEC1F500A0500364915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		200D7FF91F500F7700364915 /* UIView+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
+		200D7FFA1F500F7700364915 /* UIView+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
+		200D7FFB1F500F7700364915 /* ZJHtmlRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJHtmlRenderer.h; sourceTree = "<group>"; };
+		200D7FFC1F500F7700364915 /* ZJHtmlRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJHtmlRenderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		200D7FC41F500A0500364915 /* ZJHtmlRendererDemo */ = {
 			isa = PBXGroup;
 			children = (
+				200D7FF81F500F7700364915 /* ZJHtmlRenderer */,
 				200D7FC81F500A0500364915 /* AppDelegate.h */,
 				200D7FC91F500A0500364915 /* AppDelegate.m */,
 				200D7FCB1F500A0500364915 /* ViewController.h */,
@@ -138,6 +145,18 @@
 				200D7FEC1F500A0500364915 /* Info.plist */,
 			);
 			path = ZJHtmlRendererDemoUITests;
+			sourceTree = "<group>";
+		};
+		200D7FF81F500F7700364915 /* ZJHtmlRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				200D7FF91F500F7700364915 /* UIView+Snapshot.h */,
+				200D7FFA1F500F7700364915 /* UIView+Snapshot.m */,
+				200D7FFB1F500F7700364915 /* ZJHtmlRenderer.h */,
+				200D7FFC1F500F7700364915 /* ZJHtmlRenderer.m */,
+			);
+			name = ZJHtmlRenderer;
+			path = ../../ZJHtmlRenderer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +226,7 @@
 				TargetAttributes = {
 					200D7FC11F500A0500364915 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QH9L9GBR46;
 						ProvisioningStyle = Automatic;
 					};
 					200D7FDA1F500A0500364915 = {
@@ -273,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200D7FFD1F500F7700364915 /* UIView+Snapshot.m in Sources */,
 				200D7FCD1F500A0500364915 /* ViewController.m in Sources */,
+				200D7FFE1F500F7700364915 /* ZJHtmlRenderer.m in Sources */,
 				200D7FCA1F500A0500364915 /* AppDelegate.m in Sources */,
 				200D7FC71F500A0500364915 /* main.m in Sources */,
 			);
@@ -371,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -426,9 +448,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QH9L9GBR46;
 				INFOPLIST_FILE = ZJHtmlRendererDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.evan..ZJHtmlRendererDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.ZJHtmlRendererDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -437,9 +461,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QH9L9GBR46;
 				INFOPLIST_FILE = ZJHtmlRendererDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.evan..ZJHtmlRendererDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.ZJHtmlRendererDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -509,6 +535,7 @@
 				200D7FF11F500A0500364915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		200D7FF21F500A0500364915 /* Build configuration list for PBXNativeTarget "ZJHtmlRendererDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +544,7 @@
 				200D7FF41F500A0500364915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		200D7FF51F500A0500364915 /* Build configuration list for PBXNativeTarget "ZJHtmlRendererDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +553,7 @@
 				200D7FF71F500A0500364915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
