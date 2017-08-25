@@ -9,4 +9,5 @@ s.source       = { :git => "https://github.com/evanzhou0319/ZJHtmlRenderer.git",
 s.platform     = :ios, '7.0'
 s.requires_arc = true
 s.source_files = 'ZJHtmlRenderer/ZJHtmlRenderer.{h,m}'
+s.framework  = "UIKit"
 end
