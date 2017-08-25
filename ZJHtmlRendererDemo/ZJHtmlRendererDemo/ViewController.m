@@ -41,7 +41,6 @@
     self.htmlRenderer = [ZJHtmlRenderer creatImageWithURL:url imageWidth:imageWidth completion:^(UIImage *image, NSError *error) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf setImage:image];
-    
     }];
 }
 

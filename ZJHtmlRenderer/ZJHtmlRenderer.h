@@ -17,6 +17,7 @@ typedef void(^CompletionBlock)(UIImage *image, NSError *error);
 
 @property (nonatomic, copy) CompletionBlock completionBlock;
 
+
 + (instancetype)creatImageWithURL:(NSURL *)url
                        completion:(CompletionBlock)completionBlock;
 
