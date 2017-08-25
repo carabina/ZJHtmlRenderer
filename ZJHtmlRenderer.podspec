@@ -8,6 +8,6 @@ s.authors      = { "evan" => "evanzhou0319@qq.com" }
 s.source       = { :git => "https://github.com/evanzhou0319/ZJHtmlRenderer.git", :tag => s.version }
 s.platform     = :ios, '7.0'
 s.requires_arc = true
-s.source_files = 'ZJHtmlRenderer/ZJHtmlRenderer.{h,m}'
+s.source_files = "ZJHtmlRenderer/ZJHtmlRenderer.{h,m}"
 s.framework  = "UIKit"
 end
